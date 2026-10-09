@@ -23,16 +23,27 @@
     }
   ],
   "env": {
+    "APP_NAME": "Sistem Gudang",
     "APP_ENV": "production",
     "APP_DEBUG": "false",
+    "APP_KEY": "base64:WMDIh9uesU4h2VBROccDU16NhfSXLxq3MZ2zTV2OL7g=",
+    "APP_URL": "https://inventory-first-1-gnu6-one.vercel.app",
+    "ASSET_URL": "https://inventory-first-1-gnu6-one.vercel.app",
+    "DB_CONNECTION": "mysql",
+    "DB_HOST": "gateway01.ap-southeast-1.prod.aws.tidbcloud.com",
+    "DB_PORT": "4000",
+    "DB_DATABASE": "test",
+    "DB_USERNAME": "p3Nk44MDa1Aubkc.root",
+    "DB_PASSWORD": "3GBoyHfRdl5MrfM1",
+    "MYSQL_ATTR_SSL_CA": "database/certs/ca.pem",
+    "SESSION_DRIVER": "cookie",
+    "CACHE_STORE": "array",
+    "LOG_CHANNEL": "stderr",
     "APP_CONFIG_CACHE": "/tmp/bootstrap/cache/config.php",
     "APP_EVENTS_CACHE": "/tmp/bootstrap/cache/events.php",
     "APP_PACKAGES_CACHE": "/tmp/bootstrap/cache/packages.php",
     "APP_ROUTES_CACHE": "/tmp/bootstrap/cache/routes.php",
     "APP_SERVICES_CACHE": "/tmp/bootstrap/cache/services.php",
-    "VIEW_COMPILED_PATH": "/tmp/storage/framework/views",
-    "CACHE_STORE": "array",
-    "SESSION_DRIVER": "cookie",
-    "LOG_CHANNEL": "stderr"
+    "VIEW_COMPILED_PATH": "/tmp/storage/framework/views"
   }
 }

@@ -55,7 +55,13 @@ return [
             'strict' => true,
             'engine' => null,
             'options' => extension_loaded('pdo_mysql') ? array_filter([
-                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA', file_exists(database_path('certs/ca.pem')) ? database_path('certs/ca.pem') : null),
+                PDO::MYSQL_ATTR_SSL_CA => (function() {
+                    $envCa = env('MYSQL_ATTR_SSL_CA');
+                    if ($envCa && file_exists($envCa)) return $envCa;
+                    if ($envCa && file_exists(base_path($envCa))) return base_path($envCa);
+                    if (file_exists(database_path('certs/ca.pem'))) return database_path('certs/ca.pem');
+                    return null;
+                })(),
             ]) : [],
         ],
 
